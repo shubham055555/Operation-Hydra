@@ -1,0 +1,19 @@
+﻿From: support@hydra-pay.example
+To: victim02@example.test
+Date: Sat, 05 Sep 2026 11:30:00 +0530
+Subject: Payment Failed - Action Required
+Message-ID: <hydra-002@hydra-pay.example>
+Received: from smtp.hydra-pay.example (198.51.100.25)
+        by victim-mail.example.test with ESMTP
+Authentication-Results: SPF=SOFTFAIL; DKIM=FAIL; DMARC=FAIL
+
+Dear User,
+
+Your recent payment could not be processed.
+
+To avoid service interruption, confirm your payment information here:
+https://payment-hydra.example.test/confirm
+
+Attachment: payment_notice.html
+
+This is a SIMULATED phishing email for academic investigation.

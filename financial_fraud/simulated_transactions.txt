@@ -1,0 +1,42 @@
+﻿OPERATION HYDRA - SIMULATED FINANCIAL FRAUD LOG
+================================================
+Incident ID: HYDRA-2026-001
+Data Classification: SYNTHETIC / ACADEMIC USE ONLY
+
+Timestamp           Txn_ID       Method       Amount   Status      Source              Destination
+---------------------------------------------------------------------------------------------------
+2026-09-05 09:01    TXN-001      UPI          18500    SUCCESS     VICTIM-SIM-01       MULE-SIM-01
+2026-09-05 09:04    TXN-002      UPI          22000    SUCCESS     VICTIM-SIM-01       MULE-SIM-01
+2026-09-05 09:08    TXN-003      UPI          19500    SUCCESS     VICTIM-SIM-02       MULE-SIM-01
+2026-09-05 09:12    TXN-004      CARD         12750    SUCCESS     VICTIM-SIM-02       MERCHANT-SIM-01
+2026-09-05 09:15    TXN-005      UPI          25000    SUCCESS     MULE-SIM-01        CRYPTO-SIM-01
+2026-09-05 09:18    TXN-006      UPI          24000    SUCCESS     MULE-SIM-01        CRYPTO-SIM-01
+2026-09-05 09:21    TXN-007      UPI          23500    SUCCESS     MULE-SIM-01        CRYPTO-SIM-01
+
+SIMULATED UPI PATTERN
+---------------------
+- Multiple victim accounts send funds to one intermediate account.
+- Transactions occur within a short time window.
+- Amounts are relatively similar.
+- Intermediate account rapidly forwards funds to a simulated crypto destination.
+
+SIMULATED MULE ACCOUNT
+---------------------
+Account ID: MULE-SIM-01
+Role: Intermediate / Mule Account
+Status: Synthetic
+
+SIMULATED CRYPTO DESTINATION
+----------------------------
+Wallet ID: BTC-SIM-HYDRA-001
+Address: 1HydraSimulatedBitcoinAddressExample
+Status: Synthetic / Invalid for real-world use
+
+INVESTIGATION NOTE
+------------------
+The transaction pattern is intentionally designed to demonstrate
+a possible layering/funneling pattern.
+
+No real bank account, UPI ID, card number, cryptocurrency wallet,
+or financial institution is involved.
+

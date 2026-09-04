@@ -1,0 +1,29 @@
+﻿OPERATION HYDRA - SIMULATED INCIDENT
+
+Incident ID: HYDRA-2026-001
+Scenario Type: Multi-Vector Cyber Crime
+Status: SIMULATION / ACADEMIC USE ONLY
+
+Attack Flow:
+1. Victim received a fake financial-services email.
+2. Email contained a spoofed sender identity and suspicious link.
+3. Victim was redirected to a simulated login page.
+4. Dummy credentials were captured in the simulation.
+5. A simulated malware attachment represented a Trojan/keylogger payload.
+6. Dummy payment information was used to simulate financial fraud.
+7. Simulated funds were transferred through a mule-account pattern.
+8. Cryptocurrency movement was represented using dummy wallet addresses.
+
+Identified Cyber Crimes:
+- Phishing
+- Email/Sender Spoofing
+- Website/DNS Spoofing
+- Unauthorized Access / Credential Theft
+- Malware Distribution
+- Financial / Payment Fraud
+- Spamming
+
+IMPORTANT:
+All domains, credentials, payment details, IP addresses and cryptocurrency
+identifiers used in this project are synthetic or documentation-only.
+No real victim, account, payment card or malware is involved.

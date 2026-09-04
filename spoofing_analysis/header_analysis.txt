@@ -1,0 +1,26 @@
+======================================================================
+FILE: phishing_email_01.txt
+FROM: Not found
+SUBJECT: Urgent: Verify Your Account
+IP ADDRESSES: 192.0.2.10
+URLS: https://login-hydra.example.test/verify
+AUTHENTICATION: SPF=FAIL; DKIM=FAIL; DMARC=FAIL
+ASSESSMENT: Suspicious simulated phishing message
+
+======================================================================
+FILE: phishing_email_02.txt
+FROM: Not found
+SUBJECT: Payment Failed - Action Required
+IP ADDRESSES: 198.51.100.25
+URLS: https://payment-hydra.example.test/confirm
+AUTHENTICATION: SPF=SOFTFAIL; DKIM=FAIL; DMARC=FAIL
+ASSESSMENT: Suspicious simulated phishing message
+
+======================================================================
+FILE: phishing_email_03.txt
+FROM: Not found
+SUBJECT: Security Alert - Suspicious Login Detected
+IP ADDRESSES: 203.0.113.45
+URLS: https://security-hydra.example.test/review
+AUTHENTICATION: SPF=FAIL; DKIM=FAIL; DMARC=FAIL
+ASSESSMENT: Suspicious simulated phishing message

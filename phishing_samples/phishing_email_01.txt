@@ -1,0 +1,21 @@
+﻿From: security-alert@hydra-bank.example
+To: victim01@example.test
+Date: Sat, 05 Sep 2026 10:15:00 +0530
+Subject: Urgent: Verify Your Account
+Message-ID: <hydra-001@hydra-bank.example>
+Received: from mail.hydra-bank.example (192.0.2.10)
+        by victim-mail.example.test with ESMTP
+Authentication-Results: SPF=FAIL; DKIM=FAIL; DMARC=FAIL
+
+Dear Customer,
+
+Your account requires immediate verification.
+
+Please verify your account using the link below:
+https://login-hydra.example.test/verify
+
+Failure to verify within 24 hours may result in temporary account restriction.
+
+Attachment: account_verification.html
+
+This is a SIMULATED phishing email for academic investigation.

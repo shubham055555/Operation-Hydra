@@ -1,0 +1,19 @@
+﻿From: noreply@hydra-security.example
+To: victim03@example.test
+Date: Sat, 05 Sep 2026 13:45:00 +0530
+Subject: Security Alert - Suspicious Login Detected
+Message-ID: <hydra-003@hydra-security.example>
+Received: from mail.hydra-security.example (203.0.113.45)
+        by victim-mail.example.test with ESMTP
+Authentication-Results: SPF=FAIL; DKIM=FAIL; DMARC=FAIL
+
+Security Notification
+
+A suspicious login attempt was detected on your account.
+
+Review the activity immediately:
+https://security-hydra.example.test/review
+
+Attachment: security_report.html
+
+This is a SIMULATED phishing email for academic investigation.

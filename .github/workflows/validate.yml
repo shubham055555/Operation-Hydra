@@ -1,0 +1,83 @@
+﻿name: Validate Operation Hydra
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check required directories
+        shell: bash
+        run: |
+          required_dirs=(
+            "phishing_samples"
+            "spoofing_analysis"
+            "malware_analysis"
+            "financial_fraud"
+            "generated_data"
+            "extracted_artifacts"
+            "hashes"
+            "scripts"
+            "screenshots"
+            "report"
+          )
+
+          for dir in "${required_dirs[@]}"; do
+            if [ ! -d "$dir" ]; then
+              echo "Missing directory: $dir"
+              exit 1
+            fi
+            echo "OK: $dir"
+          done
+
+      - name: Check required files
+        shell: bash
+        run: |
+          required_files=(
+            "README.md"
+            "scripts/phishing_header_analyzer.py"
+            "scripts/extract_malware_iocs.py"
+            "scripts/financial_fraud_analyzer.py"
+            "scripts/generate_hashes.py"
+            "scripts/verify_hashes.py"
+          )
+
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Missing file: $file"
+              exit 1
+            fi
+            echo "OK: $file"
+          done
+
+      - name: Markdown validation
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          files = list(Path(".").rglob("*.md"))
+
+          if not files:
+              raise SystemExit("No Markdown files found")
+
+          for file in files:
+              text = file.read_text(encoding="utf-8")
+              if not text.strip():
+                  raise SystemExit(f"Empty Markdown file: {file}")
+              print(f"Validated: {file}")
+
+          print(f"Validated {len(files)} Markdown files.")
+          PY
+
+      - name: Python syntax check
+        shell: bash
+        run: |
+          python -m py_compile scripts/*.py
+          echo "Python syntax validation passed."
